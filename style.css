@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-image: url("pic.jpg"); */
+  /* height: 100vh; */
+  width: 100vw;
+  background-color: #ececec;
+  /* background-position: center top; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+}
+
+.sidebar {
+  position: absolute;
+  background-color: #142d4c;
+  /* width: 129px; */
+  height: 350vh;
+  font-family: "Playfair Display", serif;
+  transition: transform 0.3s ease-in;
+}
+.sidebar nav {
+  padding: 14px;
+}
+.sidebar nav li {
+  list-style: none;
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 45px;
+  line-height: 2.5;
+  text-align: center;
+}
+.sidebar nav li a {
+  text-decoration: none;
+  color: #ececec;
+}
+.container {
+  display: flex;
+}
+.infocontainer {
+  display: flex;
+  background-color:#142d4c;
+  color: #ececec;
+  width: 100vw;
+  height: 50vh;
+  margin: 90px 0px;
+  justify-content: space-around;
+}
+.devInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 15vw;
+}
+.devPic img {
+  height: 70vh;
+  margin-top: 10vh;
+  background-position: 150vw;
+  background-color: #c9c9c7;
+}
+.hello {
+  font-size: 30px;
+}
+.name {
+  font-size: 50px;
+  font-weight: bold;
+}
+.about {
+  font-size: 35px;
+}
+.buttons {
+  margin-top: 20px;
+}
+.buttons button {
+  padding: 8px;
+  border-radius: 14px;
+  color: #142d4c;
+  background-color: #ececec;
+  cursor: pointer;
+}
+.buttons button:hover {
+  color: #ececec;
+  background-color:#385170;
+}
+.cardDeck{
+  display: inline-flex;
+  width: 100vw;
+  text-align: center;
+  font-size: larger;
+  margin-top: 20vh;
+  padding: 15px;
+  background-color:#142d4c;
+  color: #ececec;
+}
+.card{
+  margin-left: 17vw;
+}
+.card img{
+  width: 100px;
+  height: 100px;
+}
+.card a {
+  text-decoration: none;
+  color:#ececec;
+  font-size: 40px;
+  font-family: ui-monospace;
+}
+.card button{
+    padding: 8px;
+    border-radius: 14px;
+    color: #142d4c;
+    background-color: #ececec;
+    cursor: pointer;
+  }
+  .card button:hover {
+    color: #ececec;
+    background-color:#385170;
+  }
+.aboutme h2 {
+  background-color:#142d4c;
+  color: #ececec;
+  padding: 3px;
+}
+.aboutme h4 {
+  margin: 12px;
+  background-color:#385170;
+  color: #ececec;
+  padding: 3px;
+}
+.aboutme p {
+  margin: 20px 20px;
+  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+}
+.aboutme h3 {
+    font-size: 16px;
+    margin: 8px 20px;
+}
+.aboutme ul {
+    list-style-type: disc; /* Bulleted list */
+    margin-left: 55px; /* Adjust indentation as needed */
+}
+.aboutme li {
+    margin: 5px 0;
+}
+
+.sidebarGo {
+  transform: translate(-127px, 0px);
+  position: absolute;
+}
+.hamburger {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 8px;
+}
+.cross {
+  margin-left: 67px;
+}
+
+@media (max-width: 500px) {
+  * {
+    /* background-color: rgb(219, 216, 216); */
+  }
+  .devInfo{
+    font-size: 10px;
+  }
+  .devPic {
+    display: none;
+  }
+  .infocontainer, caedDeck{
+    margin: 200px, 200px;
+  }
+  /* .sidebar {
+    transform: translate(-127px, 0px);
+    position: absolute;
+  } */
+}
