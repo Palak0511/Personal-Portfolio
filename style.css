@@ -6,20 +6,23 @@
 }
 
 body {
-  /* background-image: url("pic.jpg"); */
-  /* height: 100vh; */
-  width: 100vw;
+  width: 100vw; 
+  min-height: 100vh;
   background-color: #ececec;
-  /* background-position: center top; */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
+  font-family: 'Work Sans', sans-serif;
+  padding: 0; 
+  overflow-x: hidden;
+  transition: background-color 0.3s ease; 
+}
+
+body.gradient-background {
+  background: linear-gradient(to bottom right, #ececec, #f5f5f5); 
 }
 
 .sidebar {
   position: absolute;
   background-color: #142d4c;
-  /* width: 129px; */
-  height: 350vh;
+  height: 100vh;
   font-family: "Playfair Display", serif;
   transition: transform 0.3s ease-in;
 }
@@ -31,13 +34,14 @@ body {
   font-size: 20px;
   padding-top: 50px;
   padding-bottom: 45px;
-  line-height: 2.5;
+  line-height: 0.5;
   text-align: center;
 }
 .sidebar nav li a {
   text-decoration: none;
   color: #ececec;
 }
+
 .container {
   display: flex;
 }
@@ -120,63 +124,153 @@ body {
     color: #ececec;
     background-color:#385170;
   }
-.aboutme h2 {
-  background-color:#142d4c;
-  color: #ececec;
-  padding: 3px;
-}
-.aboutme h4 {
-  margin: 12px;
-  background-color:#385170;
-  color: #ececec;
-  padding: 3px;
-}
-.aboutme p {
-  margin: 20px 20px;
-  font-size: large;
-  font-family: "Times New Roman", Times, serif;
-}
-.aboutme h3 {
-    font-size: 16px;
-    margin: 8px 20px;
-}
-.aboutme ul {
-    list-style-type: disc; /* Bulleted list */
-    margin-left: 55px; /* Adjust indentation as needed */
-}
-.aboutme li {
-    margin: 5px 0;
-}
 
-.sidebarGo {
-  transform: translate(-127px, 0px);
-  position: absolute;
-}
-.hamburger {
-  position: absolute;
-  cursor: pointer;
-  top: 10px;
-  left: 8px;
-}
-.cross {
-  margin-left: 67px;
-}
+  
+  .aboutme-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px; 
+    background-color: #ffffff; 
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd; 
+    transition: box-shadow 0.3s ease-in-out; 
+  }
+  
+  .aboutme-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+  }
+  
+  @media (max-width: 500px) {
+    .aboutme-container {
+      width: 95%;
+      padding: 20px; 
+      margin: 20px auto; 
+    }
+  }  
+  
+  .aboutme h2 {
+    background-color: #142d4c;
+    color: #ececec;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 28px; 
+  }
+  
+  .aboutme h4 {
+    background-color: #385170;
+    color: #ececec;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 6px;
+  }
+  
+  .aboutme p {
+    margin: 20px 40px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .aboutme h3 {
+    font-size: 18px;
+    margin: 15px 40px;
+  }
+  
+  .aboutme ul {
+    list-style-type: disc;
+    margin: 10px 60px;
+  }
+  
+  .aboutme li {
+    margin: 8px 0;
+  }
+  
+  .aboutme li::marker {
+    color: #385170; 
+  }
+  
 
-@media (max-width: 500px) {
-  * {
-    /* background-color: rgb(219, 216, 216); */
-  }
-  .devInfo{
-    font-size: 10px;
-  }
-  .devPic {
-    display: none;
-  }
-  .infocontainer, caedDeck{
-    margin: 200px, 200px;
-  }
-  /* .sidebar {
+  .sidebarGo {
     transform: translate(-127px, 0px);
     position: absolute;
-  } */
-}
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 8px;
+    display: flex; 
+    align-items: center;
+  }
+  
+  .hamburger img {
+    transition: opacity 0.2s ease-in-out; 
+  }
+  
+  .cross {
+    margin-left: 67px;
+  }
+ 
+  .cross {
+    display: none;
+  }
+  
+  .show-sidebar .ham {
+    display: none; 
+  }
+  
+  .show-sidebar .cross {
+    display: inline;
+  }
+
+
+  @media (max-width: 500px) {
+    body {
+      background-color: #f4f4f4;
+    }
+  
+    .devInfo {
+      font-size: 12px;
+      text-align: center;
+  
+    .devPic {
+      display: none; 
+    }
+  
+    .infocontainer {
+      flex-direction: column; 
+      margin: 20px; 
+      padding: 0 10px;
+    }
+  
+    .cardDeck {
+      flex-direction: column; 
+      align-items: center; 
+      margin: 20px 0; 
+    }
+  
+    .card {
+      margin: 10px 0;
+      width: 80%;
+    }
+  
+    .hamburger {
+      top: 5px;
+      left: 5px;
+    }
+  
+    .sidebar {
+      width: 100%;
+      transform: translateX(0);
+      position: relative; 
+      z-index: 10; 
+    }
+  }
+  
